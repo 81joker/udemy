@@ -15,7 +15,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Admin Routes 
 
 // Route::group(['middleware' => ['auth', 'admin'] ], function () {
-	Route::group(['middleware' => ['auth' ], function () {
 
 
 	Route::get('admin', function() {
@@ -51,4 +50,3 @@ Route::get('/home', 'HomeController@index')->name('home');
 	Route::put('admin/profile', ['as' => 'profile.update', 'uses' => 'Admin\ProfileController@update']);
 	
 	Route::put('admin/profile/password', ['as' => 'profile.password', 'uses' => 'Admin\ProfileController@password']);
-});

@@ -17,10 +17,10 @@ class Admin
     {   
         $user = auth()->user();
 
-        if($user->admin == 1) {
-            return $next($request);
-        }else {
-            return abort(404);
-        }
+        // if($user->admin == 1) {
+        //     return $next($request);
+        // }else {
+        //     return abort(404);
+        // }
     }
 }
