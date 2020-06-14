@@ -14,7 +14,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // Admin Routes 
 
-Route::group(['middleware' => ['auth', 'admin'] ], function () {
+// Route::group(['middleware' => ['auth', 'admin'] ], function () {
+	Route::group(['middleware' => ['auth' ], function () {
+
 
 	Route::get('admin', function() {
 		return redirect('admin/dashboard');
