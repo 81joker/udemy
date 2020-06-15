@@ -32,6 +32,7 @@ class CourseController extends Controller
         ];
 
         $this->validate($request, $rules);
+        $request['slug'] = strtolower(str_replace(' ','_',$request->title )) ;
 
         $course = Course::create($request->all());
 
