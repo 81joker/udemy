@@ -1,7 +1,7 @@
 @extends('layouts.app', ['title' => __('Question Management')])
 
 @section('content')
-    @include('admin.users.partials.header', ['title' => __('Add Question')])   
+    @include('admin.users.partials.header', ['title' => __('Edit Question')])   
 
     <div class="container-fluid mt--7">
         <div class="row">
@@ -72,6 +72,21 @@
                                     @if ($errors->has('score'))
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $errors->first('score') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                                <div class="form-group{{ $errors->has('type') ? ' has-danger' : '' }}">
+                                    <label class="form-control-label" for="input-score">{{ __('Question Type') }}</label>
+                                    
+                                    <select name="type" required class="form-control">
+                                        <option <?php if($question->type == 'text') echo 'selected' ?> value="text">text</option>
+                                        <option <?php if($question->type == 'checkbox') echo 'selected' ?> value="checkbox">checkbox</option>
+                                        
+                                    </select>
+
+                                    @if ($errors->has('type'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('type') }}</strong>
                                         </span>
                                     @endif
                                 </div>

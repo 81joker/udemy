@@ -30,14 +30,15 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
         <div class="container-fluid">
              
-        <a class="navbar-brand" href="#"><span class="logo">LC</span> Learncode</a>
+        <a class="navbar-brand" href="/home"><span class="logo">LC</span> Learncode</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse links" id="navbarSupportedContent">
-            <form class="form-inline my-2 my-lg-0 search-form">
-            <input placeholder="find your course..." class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <form class="form-inline my-2 my-lg-0 search-form" method="GET" action="/search">
+            <input placeholder="find your course..." name="q" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <i class="fas fa-search"></i>
         </form>
 
         <ul class="navbar-nav ml-auto">
@@ -53,7 +54,7 @@
                     {{\Str::limit(auth()->user()->name, 10)}}
                     @endauth
                     @guest
-                    Login
+                   <a href="{{ route('login') }}">Login</a> 
                     @endguest
                 </a>
                 @auth

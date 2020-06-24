@@ -10,16 +10,42 @@ body {
 }
 
 
-/* Home page */
+/* Home page + Nav */
 
 .search-form {
 	margin-left: 250px;
+	position: relative;
 }
 .search-form,
 .search-form input {
 	width: 500px !important;
 	border-radius: 0;
+	color: #fff;
+	border: none;
 }
+.search-form input{
+	height: 45px;
+ background-color: #1e5184;
+ border-radius: 10px;
+
+
+}
+
+.search-form input:focus,
+.search-form input:active{
+	color: #fff;
+	background-color: #1e5184;;
+}
+
+.search-form i{
+	position: absolute;;
+	top: 15px;
+	right: 20px;
+	text-align: center;
+	font-size: 15px;
+	color: #dad2d2;
+} 
+
 
 .links ul {
 	margin-right: 40px;
@@ -315,7 +341,7 @@ footer div.footer-copyright a {
 
 /* Start style course single */
 .course-header{
-	margin: 50px 0px;
+	margin: 90px 0px;
 	/* margin-bottom: 50px; */
 	background: #333;
 	font-family: 'lato';
@@ -441,19 +467,134 @@ width: 100%;
 }
 .quizzes .quiz {
 	padding: 15px;
-	width: 20%;
+	width: 150px;
 	margin-left: 1.2%;
 	margin-bottom: 15px;
 	background-color: #1c5996;
 	transition: .2ms ease-in-out;
 	display:inline-block;
 	text-align: center;
+	border-radius: 4px;
 }
 .quizzes .quiz a {
 	color: #fff;
 	font-weight: 500;
 	text-decoration: none;
 }
+.quizzes .quiz a:hover{
+	color: #ddd;
+	
+}
 
 
 /* End Quzzes Course Style */
+
+/* Start Questions Course Style */
+.quiz-container {
+	margin-top: 50px;
+}
+.quiz-container h2{
+	margin-bottom: 40px;
+}
+
+
+.quiz-container .quiz-questions{
+	margin-top: 12px;
+	margin-bottom: 15px;
+}
+.quiz-container .quiz-questions form {
+	margin-top: 10px;
+	
+}
+.quiz-container .quiz-questions form .title {
+	margin-bottom: 14px;
+	font-size: 17px;
+	color:#9b7979;
+	font-weight: 500;
+	display: inline;
+
+	
+}
+.quiz-container .quiz-questions form .score {
+ color: rgb(216, 124, 114);
+ display: inline;
+
+}
+.quiz-container .quiz-questions form label[for='answer']{
+	
+}
+.quiz-container   form .radio .checkbox{
+
+}
+/* End Questions Course Style */
+
+/* Start style Search */
+.search-courses{
+	margin-top: 50px;	
+	
+
+
+}
+
+.search-courses .course .col-sm-8,
+.search-courses .course .col-sm-4{
+	padding: 0;
+
+}
+
+.container h2{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	
+}
+
+.search-courses .course{
+	box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+
+	margin-bottom: 30px;
+	
+}
+
+.search-courses .course .course-image img {
+	width: 100%;
+	height: 150px;
+	max-height: 150px;
+
+
+}
+
+.search-courses .course .course-info{
+	padding: 10px;
+	margin-right: 10px;
+	height: 150px;
+	max-height: 150px;
+
+	
+}
+.main{
+	padding: 30px;
+	border: 2px solid #00f;
+
+}
+.search-courses .course  .course-info  h6 span   .free-badge,
+.search-courses .course .course-info  h6 span   .paid-badge{
+	background-color:#fff;
+	margin-right: 40px;
+	padding: 5px 10px;
+	font-size: 15px;
+	border-radius: 20px;
+	font-weight: 400px;
+
+	
+}
+.search-courses .course  .course-info  h6 span    .free-badge{
+	color: white;
+	background-color: green;
+}
+.search-courses .course .course-info  h6 span   .paid-badge{
+	color: #fff;
+	background-color: #8e1717;
+}
+
+
+/* End Style Search */

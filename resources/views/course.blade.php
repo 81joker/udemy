@@ -3,6 +3,18 @@
 
 @section('content')
 <div class="container">
+
+  <div  style="margin-top: 15px;margin-bottom: -35px;">  
+    @if (session('status'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('status') }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    @endif
+  </div>
+
  <div class="course-header">
      <div class="row">
         <div class="col-sm-8">
@@ -77,29 +89,32 @@
       </div>
     </div>
   </div>
-  <div class="container">
-   <div class="quizzes">
-    <h3>Course Quizzes</h3>
-
-        <div class="row">
-            <div class="col-sm-12">
-            @if(count($course->quizzes) > 0 )
-                @foreach ($course->quizzes as $quiz)
-                <div class="quiz">
-                  <a href="{{$quiz->name}}" target="_blank">
-                    {{$quiz->name}}
-                </a>
-                </div>
-                @endforeach
-        
-               
-                @else
-              <div class="alert alert-secondary">
-                  This course does not include any Quizzes
-              </div>
-              @endif
-          <div>
+        <div class="container">
+          <div class="quizzes">
+              <h3>Course Quizzes</h3>
+                  <div class="row">
+                     <div class="col-xs-12">
+                      @if(count($course->quizzes) > 0 )
+                         @foreach ($course->quizzes as $quiz)
+                          <div class="quiz">
+                              <a href="/course/{{$course->slug}}/quizzes/{{$quiz->name}}" target="_blank">
+                                  {{$quiz->name}}
+                              </a>
+                            </div>
+                         @endforeach
+                         @else
+                                <div class="alert alert-secondary">
+                                    This course does not include any Quizzes
+                        </div>
+                      @endif
+                     </div>
+                  </div>
+          </div>
       </div>
+
+
+    
+    
    </div>
   </div>
 @endsection
