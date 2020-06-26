@@ -7,6 +7,12 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/course/{slug}', 'CoursesController@index')->name('course');
 Route::get('/course/{slug}/quizzes/{name}', 'QuizController@index')->name('quizze');
 Route::post('/course/{slug}/quizzes/{name}', 'QuizController@submit')->name('quizze');
+Route::get('/tracks/{name}', 'TrackController@index')->name('track');
+
+Route::get('/mycourses', 'MyCoursesController@index')->name('mycourses');
+Route::get('/profile', 'ProfileController@index')->name('mycourses');
+
+
 
 Route::get('/search' , 'SearchController@index');
 
