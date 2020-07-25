@@ -17,7 +17,7 @@ class MyCoursesController extends Controller{
         
                $user = auth()->user();
                $user_mycourses = $user->courses;
-    return view('mycourses' , compact('user_mycourses'));
+    return view('mycourses' , compact('user_mycourses','user'));
 
 
     }

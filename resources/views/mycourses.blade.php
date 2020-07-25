@@ -6,8 +6,9 @@
 <div class="mycourses">
     <h4>Your Courses</h4>
     <div class="courses">
-        <div class="row">		
-        @foreach($user_mycourses as $course)
+        <div class="row">	
+            @if (count($user_mycourses) == 1)
+            @foreach($user_mycourses as $course)
             <div class="col-sm-3">
                 <div class="course">
                     @if($course->photo)
@@ -21,6 +22,11 @@
                 </div>
             </div>
         @endforeach
+            @else
+            <h1>Haloo <strong style="color: rebeccapurple">{{$user->name}}</strong> Sorry You have not courses </h1>
+            @endif	
+       
+        {{-- End --}}
     </div>
   </div>
 </div>

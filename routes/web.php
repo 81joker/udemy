@@ -10,7 +10,19 @@ Route::post('/course/{slug}/quizzes/{name}', 'QuizController@submit')->name('qui
 Route::get('/tracks/{name}', 'TrackController@index')->name('track');
 
 Route::get('/mycourses', 'MyCoursesController@index')->name('mycourses');
+
 Route::get('/profile', 'ProfileController@index')->name('mycourses');
+Route::post('/profile', 'ProfileController@update_image');
+
+Route::get('/avtar', 'ProfileController@avtar')->name('mycourses');
+
+Route::get('/contact' , 'ContactController@index');
+Route::post('contact' , 'ContactController@sendEmail');
+
+
+
+Route::get('/allcourses', 'AllCoursesController@index')->name('allcourses');
+
 
 
 

@@ -234,6 +234,10 @@ body {
 .famous-courses .course h6 {
 	padding: 10px;
 	min-height: 60px;
+	overflow:hidden;
+	
+	
+
 }
 .famous-courses .course img {
 	width: 255px;
@@ -675,8 +679,15 @@ width: 100%;
 	margin-top: 50px;
 	margin-bottom: 50px;
 }
+.user-profile .name-user{
+	color: #776363
+}
+.user-profile .name-user:hover{
+	color: red;
+
+}
 .user-profile .user-info  .user-imge{
-background-color: blueviolet;;
+
 }
 .user-profile .user-info .user-imge img{
 	vertical-align: middle;
@@ -684,11 +695,41 @@ background-color: blueviolet;;
 	height: auto;
 	/* border-radius: 50%; */
   }
-  .user-profile .user-info .user-data{
-	  ;
+  .user-profile .user-info  .user-imge .upload {
+	  text-align: center;
+	  margin:12px 0;
+
+}
+  .user-profile .user-info .user-imge{
+	  margin-top: 17px;
+	margin-bottom: 35px;
+
+
   }
+  .user-profile .user-info .user-data ul li{
+	  margin: 5px 0;
+	  
+}
+.user-profile .user-info .user-image .upload { 
+	margin: 10px 0;
+	text-align: center;
+   }
+   .user-profile .user-info .user-image .upload_btn { 
+	width: 100px;
+	color: red;
+   }
+   .user-profile .user-info .user-image .save_image { 
+	margin: 10px 0;
+	text-align: center;
+   }
+   
+.user-profile .user-info .user-image form #image_file{ 
+ display: none;
+
+}
+
 
   .main{
-	  background-color: chartreuse;
+	  background-color: #dcd3d31c;
 	  width: ;
   }
